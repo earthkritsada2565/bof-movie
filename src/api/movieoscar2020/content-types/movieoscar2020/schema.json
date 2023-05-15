@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movieoscar2020s",
+  "info": {
+    "singularName": "movieoscar2020",
+    "pluralName": "movieoscar2020s",
+    "displayName": "movieoscar2020"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nameMovie": {
+      "type": "string",
+      "required": true
+    },
+    "streaming": {
+      "type": "richtext"
+    },
+    "winner": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "movieoscar2020s"
+    }
+  }
+}

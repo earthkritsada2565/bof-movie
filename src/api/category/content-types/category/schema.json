@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "movieoscar2020s": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movieoscar2020.movieoscar2020",
+      "inversedBy": "category"
+    },
+    "movieoscar_2021s": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movieoscar2021.movieoscar2021",
+      "inversedBy": "categories"
+    },
+    "movieoscar_2022s": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movieoscar2022.movieoscar2022",
+      "inversedBy": "categories"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movieoscar2022s",
+  "info": {
+    "singularName": "movieoscar2022",
+    "pluralName": "movieoscar2022s",
+    "displayName": "movieoscar2022"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nameMovie": {
+      "type": "text",
+      "required": true
+    },
+    "streaming": {
+      "type": "richtext"
+    },
+    "winner": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "movieoscar_2022s"
+    }
+  }
+}
